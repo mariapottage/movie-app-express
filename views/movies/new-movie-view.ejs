@@ -1,0 +1,19 @@
+<h2> Review a New Movie </h2>
+
+<form method="post" action="/movies" enctype="multipart/form-data">
+  <label for="movie-name-input"> Movie Name </label>
+  <input  id="movie-name-input" type="text" name="movieName"
+      placeholder="Name of the Movie I am reviewing">
+  <br>
+
+  <label   for="movie-desc-input"> Description </label>
+  <textarea id="movie-desc-input" name="movieDescription"
+      placeholder="It's a beautiful movie!"></textarea>
+  <br>
+
+  <label for="movie-photo-input"> Upload Photo </label>
+  <input  id="movie-photo-input" type="file" name="moviePhoto">
+  <br>
+
+  <button> Save Movie Review </button>
+</form>

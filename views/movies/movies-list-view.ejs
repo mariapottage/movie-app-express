@@ -1,0 +1,29 @@
+<% if (movies.length === 0) { %>
+
+  <h2> You Have Not Reviewed Any Movies Just Yet </h2>
+
+<% } else { %>
+
+  <h2> Your Reviews </h2>
+
+  <% if (successMessage.length > 0) { %>
+    <div class="success"> <%= successMessage %> </div>
+  <% } %>
+
+  <ul>
+    <% movies.forEach((oneMovie) => { %>
+      <li>
+        <h3> <%= oneMovie.name %> </h3>
+
+        <p> <%= oneMovie.description %> </p>
+
+        <img src="<%= oneMovie.photoAddress %>">
+      </li>
+    <% }) %>
+  </ul>
+
+<% } %>
+
+<a href="/movies/new">
+  Review a Movie
+</a>
